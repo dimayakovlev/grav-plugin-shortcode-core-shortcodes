@@ -8,7 +8,7 @@ class ColorShortcode extends Shortcode
     public function init()
     {
         $this->shortcode->getHandlers()->add('color', function(ShortcodeInterface $sc) {
-            $color = $sc->getParameter('color', trim($sc->getParameterAt(0), '="\''));
+            $color = $sc->getParameter('color', $sc->getBbCode());
             $background = $sc->getParameter('background');
             $style = '';
             if ($color) $style = 'color: '.$color.';';
