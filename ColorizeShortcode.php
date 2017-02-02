@@ -3,11 +3,11 @@ namespace Grav\Plugin\Shortcodes;
 
 use Thunder\Shortcode\Shortcode\ShortcodeInterface;
 
-class ColorShortcode extends Shortcode
+class ColorizeShortcode extends Shortcode
 {
     public function init()
     {
-        $this->shortcode->getHandlers()->add('color', function(ShortcodeInterface $sc) {
+        $this->shortcode->getHandlers()->add('colorize', function(ShortcodeInterface $sc) {
             $color = $sc->getParameter('color', $sc->getBbCode());
             $background = $sc->getParameter('background');
             $style = '';
